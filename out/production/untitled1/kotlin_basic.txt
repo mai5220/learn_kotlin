@@ -1,0 +1,11 @@
+1.Built-in data type
+    - Numbers
+    - Booleans
+    - Characters
+    - Strings
+    - Arrays
+
+2. Standard library
+    - Collections: kotlin.collections package
+
+

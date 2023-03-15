@@ -1,0 +1,35 @@
+- collection inherits from iterable interface
+- can be Collection, List, Set, Map
+- contains objects -> same type, are called elements/items
+- List: ordered collection, access to ele by indices
+- Set: unique ele
+- Map (dictionary): set of key-value pairs
+
+Mutable Collections vs Immutable Collections
+
+MutableList: can be changed
+    - mutableListOf()
+
+List: read only -> toi uu bo nho hon mutable list
+    - listOf()
+
+Constructing collection [https://kotlinlang.org/docs/constructing-collections.html]
+    - construct from elements: listOf(), setOf(), mutableListOf(), ...
+    - create with collection builder functions: buildList(), buildSet(), buildMap()
+        Ex: val map = buildMap { // this is MutableMap<String, Int>, types of key and value are inferred from the `put()` calls below
+                put("a", 1)
+                put("b", 0)
+                put("c", 4)
+            }
+    - empty collections: emptyList(), ...
+    - initializer functions for list
+        Ex: val doubled = List(3, { it * 2 })  // or MutableList if you want to change its content later
+    - concrete type constructors(constructors kieu cu the): ArrayList, LinkedList, HashSet, ...
+    - copy: Collection copying functions from the standard library create shallow copy collections with references to the same elements
+    - invoke functions on other collections
+        Ex: val numbers = listOf("one", "two", "three", "four")
+            val longerThan3 = numbers.filter { it.length > 3 }
+            println(numbers.mapIndexed { idx, value -> value * idx })
+            println(numbers.associateWith { it.length })
+
+Array<T> vs TArray

@@ -1,0 +1,16 @@
+- can be Collection, List, Set, Map
+- contains objects -> same type, are called elements/items
+- List: ordered collection, access to ele by indices
+- Set: unique ele
+- Map (dictionary): set of key-value pairs
+
+Mutable Collections vs Immutable Collections
+
+MutableList: can be changed
+    - mutableListOf()
+
+
+List: read only -> toi uu bo nho hon mutable list
+    - listOf()
+
+Array<T> vs TArray
